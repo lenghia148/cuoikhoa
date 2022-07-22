@@ -14,8 +14,8 @@ const Header = () => {
              </a>
            </div>
            <div className={styles.right}>
-              <a className={styles.bell}><i class="fa fa-bell"></i></a>
-              <a className={styles.user}><i class="fa fa-user"></i> Acount</a>
+              <a className={styles.bell}><i className="fa fa-bell"></i></a>
+              <a className={styles.user}><i className="fa fa-user"></i> Acount</a>
            </div>
           
         </div>
