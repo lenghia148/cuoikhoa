@@ -1,0 +1,36 @@
+.wrapper
+{
+    height: 64px;
+    width: 100%;
+    border: 1px solid black;
+    
+}
+.inner 
+{   height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: red;
+}
+.logo>a>img
+{   
+    margin-left: 50px;
+    height: 35px;
+}
+.right
+{   
+    width: 280px;
+    margin-right: 50px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+
+}
+.bell
+{
+    cursor: pointer;
+}
+.user
+{
+    cursor: pointer;
+}
