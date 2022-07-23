@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styles from './Header.module.css'
 
 const Header = () => {
+  const [acount,setAcount] = useState(false)
   return (
     
     <header className={styles.wrapper}>
@@ -15,7 +16,7 @@ const Header = () => {
            </div>
            <div className={styles.right}>
               <a className={styles.bell}><i className="fa fa-bell"></i></a>
-              <a className={styles.user}><i className="fa fa-user"></i> Acount</a>
+              <a className={styles.user} onClick={()=>setAcount(true)}><i className="fa fa-user"></i> Acount</a>
            </div>
           
         </div>

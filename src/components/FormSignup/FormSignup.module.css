@@ -1,0 +1,7 @@
+.container
+{   
+    height: 100vh;
+    background-image: url('https://pizzahut.vn/9637f025c0a8602011051ed056e61616.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
