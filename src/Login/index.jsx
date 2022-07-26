@@ -14,10 +14,10 @@ const Login = () => {
       const res = await axios.get(
         "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/user.json"
       );
-      console.log(res.data);
+      
       setLoading(false);
       setDatabase(Object.values(res.data));
-      console.log(database);
+    
     } catch (error) {
       setError(true);
     }
