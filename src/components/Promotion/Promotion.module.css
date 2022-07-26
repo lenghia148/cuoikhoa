@@ -1,0 +1,21 @@
+.imgPro 
+{
+    display: flex;
+    justify-content: center;
+}
+.imgPro img 
+{
+    width: 39%;
+    margin: 1%;
+}
+.btnMenu
+{
+    width: 80%;
+    margin-left: 10%;
+    background-color: #0A8020;
+    height: 40px;
+    border-radius: 5px;
+    border-color: transparent;
+    color: white;
+    font-size:medium;
+}

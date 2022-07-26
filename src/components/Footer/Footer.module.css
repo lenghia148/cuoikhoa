@@ -1,0 +1,50 @@
+.Footer
+{
+    height: 360px;
+    background-color: #1A1A1A;
+}
+.footerPartOne
+{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    
+}
+.OneItems
+{
+    width: 13%;
+}
+.footerIcon img 
+{
+    height: 28px;
+    width: 28px;
+}
+.footerIconDown
+{
+    display: flex;
+}
+.footerIconDown1
+{
+    width: 68px;
+    height: 68px;
+}
+.footerIconDown2 img 
+{
+    width: 104px;
+    height: 31px;
+}
+.footerPartTwo
+{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 10%;
+}
+.TwoIcon img
+
+{
+    height: 49px;
+    width: 130px;
+} 

@@ -12,7 +12,7 @@ const Slide = () => {
       const res = await axios.get(
         "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/slide.json"
       );
-      // console.log(res.data);
+      
       setLoading(false);
       setDatabase(Object.values(res.data));
         
@@ -25,7 +25,7 @@ const Slide = () => {
   }, []);
   useEffect(()=>
   { 
-    if(show<-1)
+    if(show< -1)
     {
       setShow(2)
     }
