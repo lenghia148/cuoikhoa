@@ -1,17 +1,12 @@
 import React,{useState} from 'react'
 import styles from './Header.module.css'
 
-<<<<<<< HEAD
-const Header = ({acount,setAcount}) => {
-  return (  
-=======
 const Header = (props) => {
   const {acount,setAcount} = props
   
  
   return (
     
->>>>>>> a2390341b37b6e3c0a22dae020377772699ac85a
     <header className={styles.wrapper}>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         <div className={styles.inner}>
@@ -24,12 +19,8 @@ const Header = (props) => {
            <div className={styles.right}>
               <a className={styles.bell}><i className="fa fa-bell"></i></a>
               <a className={styles.user} onClick={()=>setAcount(!acount)}><i className="fa fa-user"></i> Acount</a>
-<<<<<<< HEAD
-           </div>    
-=======
-           </div>
-          
->>>>>>> a2390341b37b6e3c0a22dae020377772699ac85a
+              </div>
+
         </div>
     </header>
   )
