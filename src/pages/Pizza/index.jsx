@@ -2,8 +2,8 @@ import React from 'react'
 import Header from '../../components/Header'
 import Shopcart from '../../components/Shopcart'
 import Navbar from '../../components/Navbar'
-import styles from './Menu.module.css'
-const Menu = () => {
+import styles from './Pizza.module.css'
+const Pizza = () => {
   return (
     <div className={styles.menu}>
       <div className={styles.content}>
@@ -17,4 +17,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default Pizza

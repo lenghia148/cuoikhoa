@@ -1,0 +1,12 @@
+.menu
+{
+    display: flex;
+}
+.content
+{
+    flex: 7;
+}
+.shopcart
+{
+    flex: 3;
+}
