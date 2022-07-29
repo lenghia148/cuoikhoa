@@ -27,6 +27,19 @@ const HappySummer = () => {
       <div className={styles.content}>
         <Header></Header>
         <Navbar/>
+        <div className={styles.happySummer}>
+              { data.map((item,index)=>
+                {
+                    return <div key={item.id} className={styles.happySummer_items}> 
+                                <div style={{backgroundImage : `url(${item.imgscr})`}} className={styles.image} ></div>
+                                <h1>{item.title}</h1>
+                                <p>{item.discription}</p>
+                                <div className={styles.price}>Giá chỉ từ {item.price} đ
+                                    <button>CHỌN</button>
+                                </div>
+                           </div>
+                })}
+        </div>
       </div>
       <div className={styles.shopcart}>
         <Shopcart/>

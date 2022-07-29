@@ -12,7 +12,6 @@ export const publicRoutes = [
     
         { path:'/',component: Home},
         { path:'/signup',component: Signup},
-        
         { path:'/combo',component: Combo},
         { path:'/kidsbox',component: Kidsbox},
         { path:'/mybox',component: Mybox},
