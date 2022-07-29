@@ -21,7 +21,10 @@ const Promotion = () => {
   },[])
   return (
     <div>
-      <h1>KHUYẾN MÃI</h1>
+       <div className={styles.Container}>
+        <h1>KHUYẾN MÃI</h1>
+        <p className={styles.Underline}></p>
+      </div>
       <div className={styles.imgPro}>
       {
         imgPromotion.map((img,index)=>{
