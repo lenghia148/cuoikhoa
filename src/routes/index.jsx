@@ -15,7 +15,7 @@ export const publicRoutes = [
         { path:'/combo',component: Combo},
         { path:'/kidsbox',component: Kidsbox},
         { path:'/mybox',component: Mybox},
-        { path:'/by1get3',component: Buy1Get3},
+        { path:'/buy1get3',component: Buy1Get3},
         { path:'/pizza',component: Pizza},
         { path:'/happysummer',component: HappySummer},
    

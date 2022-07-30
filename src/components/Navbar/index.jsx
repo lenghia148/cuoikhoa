@@ -9,7 +9,7 @@ const Navbar = () => {
         <li><a>MUA 1 ĐƯỢC 3</a></li>
         <li><a>MY BOX</a></li>
         <li><a>LIMO & COMBO</a></li>
-        <li><a>PIZZA</a></li>
+      
       </ul>
     </div>
   )

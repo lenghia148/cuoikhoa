@@ -10,3 +10,26 @@
 {
     flex: 3;
 }
+.happySummer_items
+{
+    height: 323px;
+    width: 48%;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 1px 3px 13px 0px rgba(0,0,0,0.75);
+    
+}
+.image 
+{ 
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 180px;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.happySummer
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
