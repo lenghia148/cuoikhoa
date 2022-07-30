@@ -51,21 +51,25 @@ const Login = () => {
         />
       </div>
       <div className={styles.form_container}>
-        <h1>🍕🍕 WELCOME BACK!</h1>
-        <h2>
-          YOU'VE REGISTERED AS HUT REWARDS MEMBER. MAKE SURE YOU LOGIN BEFORE
-          CHECKOUT TO EARN POINTS FOR FREE PIZZAS!
-        </h2>
+        <div className={styles.container_header}>
+          <h1>🍕🍕 WELCOME BACK!</h1>
+          <h2>
+            YOU'VE REGISTERED AS HUT REWARDS MEMBER. MAKE SURE YOU LOGIN BEFORE
+            CHECKOUT TO EARN POINTS FOR FREE PIZZAS!
+          </h2>
+        </div>
         <label>User *</label>
-        <input type="text" value={users.user} onChange={(e) =>
+        <input type="text" value={users.user} className={styles.input}
+              onChange={(e) =>
               setUsers((prev) => ({ ...prev, name: e.target.value }))
             }></input>
         <label>Password *</label>
-        <input type="text" value={users.password} onChange={(e) =>
+        <input type="text" value={users.password} className={styles.input}
+              onChange={(e) =>
               setUsers((prev) => ({ ...prev, pass: e.target.value }))
             } ></input>
         <button onClick={handlerSubmitRe}>LOGIN</button>
-        <div>
+        <div className={styles.register_message}>
           Bạn chưa có tài khoản? <a>Đăng ký ngay</a> hoặc tìm hiểu thêm về Điều
           khoản và Quyền lợi Thành viên
         </div>
