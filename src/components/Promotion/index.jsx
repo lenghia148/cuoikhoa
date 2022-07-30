@@ -1,3 +1,4 @@
+import {Routes,Route,Link} from 'react-router-dom'
 import React,{useEffect,useState} from 'react'
 import axios from 'axios'
 import styles from './Promotion.module.css'
@@ -28,12 +29,12 @@ const Promotion = () => {
       <div className={styles.imgPro}>
       {
         imgPromotion.map((img,index)=>{
-          return <img key={index} src={img}/>
+          return <Link to='/happysummer' key={index} ><img className={styles.image} src={img}/></Link>
         })
       }
       
       </div>
-      <button className={styles.btnMenu}>XEM MENU</button>
+      <button className={styles.btnMenu}><Link className={styles.link} to='/happysummer'>XEM MENU</Link></button>
     </div>
   )
 }

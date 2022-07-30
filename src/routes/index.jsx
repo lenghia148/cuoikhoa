@@ -7,6 +7,7 @@ import Mybox from '../pages/Mybox'
 import Buy1Get3 from '../pages/Buy1Get3'
 import Pizza from '../pages/Pizza'
 
+
 //Public routes
 export const publicRoutes = [
     
@@ -18,6 +19,7 @@ export const publicRoutes = [
         { path:'/buy1get3',component: Buy1Get3},
         { path:'/pizza',component: Pizza},
         { path:'/happysummer',component: HappySummer},
+        
    
 ]
 export const privateRoutes = []

@@ -21,7 +21,7 @@ const HappySummer = () => {
     {
         getData()
     },[])
-   console.log(data);
+  
   return (
     <div className={styles.menu}>
       <div className={styles.content}>
@@ -30,7 +30,7 @@ const HappySummer = () => {
         <div className={styles.happySummer}>
               { data.map((item,index)=>
                 {
-                    return <div key={item.id} className={styles.happySummer_items}> 
+                    return <div key={index} className={styles.happySummer_items}> 
                                 <div style={{backgroundImage : `url(${item.imgscr})`}} className={styles.image} ></div>
                                 <h1>{item.title}</h1>
                                 <p>{item.discription}</p>
