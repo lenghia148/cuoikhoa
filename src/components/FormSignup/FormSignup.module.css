@@ -36,3 +36,14 @@
     flex-direction: column;
     margin: 10px;
 }
+.confirm_one
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.confirm_one>div 
+{
+    margin-top: 17px;
+    margin-left: 10px;
+}
