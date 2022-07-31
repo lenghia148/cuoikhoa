@@ -12,7 +12,8 @@ const FormSignup = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [database, setDatabase] = useState([]);
-    
+    const [checkbox1,setCheckbox1] =useState(false)
+    const [checkbox2,setCheckbox2] =useState(false)
     const getData = async () => {
     setLoading(true);
     try {
@@ -48,7 +49,7 @@ const FormSignup = () => {
       setError(true);
     }
   };
-  
+console.log(checkbox1,checkbox2);
   return (
     
     <div className={styles.container}>
@@ -68,7 +69,7 @@ const FormSignup = () => {
         <label htmlFor="">Địa chỉ Email *</label>
         <input type='email' name=""  value={mail} onChange={(e)=>setMail(e.target.value)}/>
       <div className={styles.confirm_one}>
-        <input type="checkbox" className={styles.confirm_checkbox} name=""  />
+        <input type="checkbox" className={styles.confirm_checkbox} id="hello" defaultChecked={checkbox1}  onChange={()=>setCheckbox1(!checkbox1)} />
         <div>Tôi đồng ý trở thành Thành viên Hut Rewards và chấp nhận các Điều khoản & Điều kiện và Chính sách bảo mật của Pizza Hut.</div>
       </div>
       </div>
@@ -83,7 +84,7 @@ const FormSignup = () => {
           <div>Chữ cái viết hoa (in hoa) A-Z. Ví dụ: A, E, R</div>
           <div>Các ký tự đặc biệt như !@#$</div>
           <div className={styles.confirm_one}>
-        <input type="checkbox" className={styles.confirm_checkbox} name="" />
+        <input type="checkbox" className={styles.confirm_checkbox} name=""  defaultChecked={checkbox2}  onChange={()=>setCheckbox2(!checkbox2)}/>
         <div>
 Tôi đồng ý trở thành Thành viên Hut Rewards và chấp nhận các Điều khoản & Điều kiện và Chính sách bảo mật của Pizza Hut.</div>
       </div>
