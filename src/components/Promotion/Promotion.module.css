@@ -1,13 +1,24 @@
 .imgPro 
 {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
+
+.image_holder {
+    padding: 10px;
+    max-width: 50%;
+    flex-basis: 50%;
+    flex-grow: 0;
+}
+
 .image
 {
-    width: 39%;
-    margin: 1%;
+    width: 100%;
+    margin: 0px;
 }
+
 .btnMenu
 {
     width: 80vw;
