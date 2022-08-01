@@ -12,9 +12,7 @@
 }
 .happySummer_items
 {
-    /* height need adjustment */
     height: auto;
-
     width: 48%;
     border: 0.1px solid gray;
     border-radius: 4px;
@@ -55,6 +53,7 @@
     line-height: 1.5;
     font-size: 1rem;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .price p {
