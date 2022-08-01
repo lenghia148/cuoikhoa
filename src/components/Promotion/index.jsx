@@ -29,7 +29,9 @@ const Promotion = () => {
       <div className={styles.imgPro}>
       {
         imgPromotion.map((img,index)=>{
-          return <Link to='/happysummer' key={index} ><img className={styles.image} src={img}/></Link>
+          return <div className={styles.image_holder}>
+                      <Link to='/happysummer' key={index} ><img className={styles.image} src={img}/></Link>
+                </div>
         })
       }
       
