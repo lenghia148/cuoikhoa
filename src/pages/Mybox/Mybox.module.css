@@ -69,10 +69,13 @@
     margin-right: 15px;
     background-color: #0A8020;
     color: white;
-    border-width: thin;
+    border-width: 0px;
     border-radius: 4px;
     padding: 10px;
     width: 25%;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+                0px 2px 2px 0px rgb(0 0 0 / 14%),
+                0px 1px 5px 0px rgb(0 0 0 / 12%);
 }
 
 .hightlight:hover {
