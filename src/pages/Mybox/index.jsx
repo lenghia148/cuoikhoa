@@ -30,14 +30,20 @@ const Mybox = () => {
         <div className={styles.happySummer}>
               { data.map((item,index)=>
                 {
-                    return <div key={item.id} className={styles.happySummer_items}> 
-                                <div style={{backgroundImage : `url(${item.imgscr})`}} className={styles.image} ></div>
-                                <h1>{item.title}</h1>
-                                <p>{item.discription}</p>
-                                <div className={styles.price}>Giá chỉ từ {item.price} đ
-                                    <button>CHỌN</button>
-                                </div>
-                           </div>
+                  return <div key={item.id} className={styles.happySummer_items}>
+                            <div className={styles.hightlight}>
+                              <div className={styles.image_holder}>
+                                <img src={item.imgscr} className={styles.image} alt=''/>
+                              </div>
+                              <h1>{item.title}</h1>
+                            </div>
+                              <p>{item.discription}</p>
+                            <hr className={styles.line} />
+                              <div className={styles.price}>
+                                  <p>Giá chỉ từ <span>{item.price}</span> đ</p>
+                                  <button>CHỌN</button>
+                              </div>
+                         </div>
                 })}
         </div>
       </div>
