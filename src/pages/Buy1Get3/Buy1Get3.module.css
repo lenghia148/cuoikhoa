@@ -29,6 +29,7 @@
 
 .happySummer_items h1 {
     padding: 0px 5px;
+    font-size: 20px;
 }
 
 .line {
@@ -42,7 +43,7 @@
 .happySummer_items p {
     padding: 5px;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .price {
