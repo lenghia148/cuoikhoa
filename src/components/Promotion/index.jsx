@@ -10,9 +10,7 @@ const Promotion = () => {
   {
     try {
       const res = await axios.get('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/promotion.json')
-      console.log(res.data);
-      setImgPromotion(Object.values(res.data))
-      console.log(imgPromotion);
+      setImgPromotion(Object.values(res.data)) 
     } catch (error) {
       
     }

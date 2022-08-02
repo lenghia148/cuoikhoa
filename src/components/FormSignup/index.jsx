@@ -31,7 +31,7 @@ const FormSignup = () => {
     getData();
   }, []);
   const handlerSubmitRe =  async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setUser({
       name,
       phoneNumer,
@@ -40,16 +40,22 @@ const FormSignup = () => {
       birthDay
     })
     try {
-      await axios.post(
-        "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/user.json",user
-      );
-      getData();
-      setLoading(false);
+      if(checkbox1 && checkbox2 )
+        {
+          await axios.post(
+            "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/user.json",user
+          );
+          getData();
+          setLoading(false);
+        }
+     else {
+          alert('check')
+     }
     } catch (error) {
       setError(true);
     }
   };
-console.log(checkbox1,checkbox2);
+
   return (
     
     <div className={styles.container}>
@@ -91,7 +97,7 @@ Tôi đồng ý trở thành Thành viên Hut Rewards và chấp nhận các Đi
         </div>
   
       </form>
-      <button onClick={handlerSubmitRe}>ĐĂNG KÝ</button>
+      <button type="submit" onClick={handlerSubmitRe}>ĐĂNG KÝ</button>
     </div>
   );
 };

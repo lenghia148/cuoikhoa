@@ -2,42 +2,44 @@ import React,{useState,useEffect} from "react";
 import axios from 'axios'
 import styles from "./Login.module.css";
 const Login = () => {
-  const [user, setUser] = useState("");
+  const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [database, setDatabase] = useState([]);
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState({});
   const getData = async () => {
     setLoading(true);
     try {
       const res = await axios.get(
         "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/user.json"
-      );
-      
+      );     
       setLoading(false);
       setDatabase(Object.values(res.data));
     
     } catch (error) {
+      console.log('hello error');
       setError(true);
     }
   };
   useEffect(() => {
     getData();
   }, []);
-  const handlerSubmitRe = async (e) => {
+  const handlerSubmit = (e) =>
+  {
     e.preventDefault();
-    try {
-      await axios.post(
-        "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/user.json",
-        users
-      );
-      getData();
-      setLoading(false);
-    } catch (error) {
-      setError(true);
+    const userLogin = database.find((item,index)=>
+    {
+        return (item.mail ===mail &&  item.password === password)
+    })
+    if (userLogin!=null)
+    {
+      alert('success')
     }
-  };
+    else{
+      alert('fail')
+    }
+  }
   return (
     <form className={styles.form_login}>
       <link
@@ -58,17 +60,17 @@ const Login = () => {
             CHECKOUT TO EARN POINTS FOR FREE PIZZAS!
           </h2>
         </div>
-        <label>User *</label>
-        <input type="text" value={users.user} className={styles.input}
+        <label>Email *</label>
+        <input type="email" value={mail} className={styles.input}
               onChange={(e) =>
-              setUsers((prev) => ({ ...prev, name: e.target.value }))
+              setMail(e.target.value)
             }></input>
-        <label>Password *</label>
-        <input type="text" value={users.password} className={styles.input}
+        <label>Mật khẩu *</label>
+        <input type="password" value={password} className={styles.input}
               onChange={(e) =>
-              setUsers((prev) => ({ ...prev, pass: e.target.value }))
-            } ></input>
-        <button onClick={handlerSubmitRe}>LOGIN</button>
+              setPassword(e.target.value)}
+             ></input>
+        <button onClick={handlerSubmit}>LOGIN</button>
         <div className={styles.register_message}>
           Bạn chưa có tài khoản? <a>Đăng ký ngay</a> hoặc tìm hiểu thêm về Điều
           khoản và Quyền lợi Thành viên
