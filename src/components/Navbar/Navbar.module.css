@@ -23,3 +23,22 @@
 {
     text-decoration: none;
 }
+
+.content li a {
+    opacity: 0.6;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    padding: 15px;
+}
+
+.content li:hover a {
+    color: red;
+    opacity: 1;
+}
+
+.content li a:focus {
+    background-color: red;
+    color: white;
+    opacity: 1;
+}
