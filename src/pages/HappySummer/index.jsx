@@ -7,6 +7,13 @@ import axios from 'axios'
 const HappySummer = () => {
     const [data,setData] = useState([])
     const [error,setError] = useState(false)
+    const [product,setProduct] = useState([])
+    const [flag,setFlag] = useState(true)
+    const [item,setItem] = useState({})
+    const [items,setItems] = useState({})
+    const [products,setProducts] = useState([])
+    const [isDelete,setIsDelete] = useState(false)
+    const [id,setId] = useState(0) 
     const getData = async () =>
            {
                
@@ -17,11 +24,59 @@ const HappySummer = () => {
                     console.log('errror');
                 }
            }
+    const getItemShopCart = async () =>
+    {   
+      
+       try {
+        const res = await axios.get('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart.json')
+        setProduct(Object.values(res.data))
+       } catch (error) {
+        console.log('errror');
+       }
+    } 
+     
     useEffect(()=>
     {
         getData()
+        getItemShopCart()
+        
     },[])
-  
+    
+    useEffect(()=>
+    {
+      handlerAddShopCart()
+    },[flag])
+    const handlerAdd = (item,id)=>
+    {
+      setId(id)
+      setItem(item)
+      setFlag(!flag)
+    }
+    const handlerAddShopCart =  async (items) =>
+    {   
+        // setItem(items)
+        try {
+           await axios.post(
+            `https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart/${id}.json`,item) 
+            getItemShopCart()  
+        } 
+        catch (error) {
+          console.log('errror');
+        } 
+    }
+    useEffect(()=>{
+      handlerDelete()
+    },[isDelete])
+   const handlerDelete = async (id) =>
+   {
+       try {
+         await axios.delete(`https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart/-N8UHstGiJkEjb6yot5o.json`)
+        
+       } catch (error) {
+         console.log('error');
+       }
+   }
+   
   return (
     <div className={styles.menu}>
       <div className={styles.content}>
@@ -30,7 +85,7 @@ const HappySummer = () => {
         <div className={styles.happySummer}>
               { data.map((item,index)=>
                 {
-                    return <div key={item.id} className={styles.happySummer_items}>
+                    return <div key={index} className={styles.happySummer_items}>
                               <div className={styles.hightlight}>
                                 <div className={styles.image_holder}>
                                   <img src={item.imgscr} className={styles.image} alt=''/>
@@ -41,14 +96,14 @@ const HappySummer = () => {
                               <hr className={styles.line} />
                               <div className={styles.price}>
                                 <p>Giá chỉ từ <span>{item.price}</span> đ</p>
-                                <button>CHỌN</button>
+                                <button onClick={()=>handlerAdd(item,item.id)}>CHỌN</button>
                               </div>
                             </div>
                 })}
         </div>
       </div>
       <div className={styles.shopcart}>
-        <Shopcart/>
+        <Shopcart product={product} item={item} handlerDelete={handlerDelete} items={items}/>
       </div>
     </div>
   )
