@@ -1,0 +1,138 @@
+{
+  "happysummer": [
+    {
+      "discription": "Combo THÊM NHIỆT MÙA HÈ với chỉ 219K - Còn gì hấp dẫn hơn Combo THÊM NHIỆT MÙA HÈ, gồm 01 bánh Pizza Dòng Truyền Thống cỡ vừa, 01 Xà Lách Gà Pesto/ Xà Lách Trộn Cá Ngừ Và Thịt Xông Khói, dùng kèm 02 lon nước 320ml tròn vị.",
+      "id": 1,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Them_Nhiet_Mua_He_400x275.jpg",
+      "price": 299000,
+      "title": "THÊM NHIỆT MÙA HÈ"
+    },
+    {
+      "discription": "Combo NHÂN ĐÔI VỊ HÈ với chỉ 299K - Còn gì hấp dẫn hơn Combo NHÂN ĐÔI VỊ HÈ, gồm 01 bánh Pizza Dòng Cao Cấp và 01 bánh Pizza Dòng Truyền Thống, đồng cỡ bánh Vừa, dùng kèm 04 lon nước 320ml tròn vị.",
+      "id": 2,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Nhan_Doi_Vi_He_400x275.jpg",
+      "price": 299000,
+      "title": "NHÂN ĐÔI MÙA HÈ"
+    },
+    {
+      "discription": "Combo HÈ NGON BẤT TẬN với chỉ 389k - Còn gì hấp dẫn hơn Combo HÈ NGON BẤT TẬN, gồm 01 Pizza Cao Cấp hoặc Truyền Thống Cỡ Lớn, 01 Cánh Gà Nướng BBQ/ Cánh Gà Chiên Xốt Cay Hàn Quốc (6 miếng), 04 lon nước 320ml",
+      "id": 3,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/He_Ngon_Bat_Tan_400x275.jpg",
+      "price": 389000,
+      "title": "HÈ NGON BẤT TẬN"
+    },
+    {
+      "discription": "Combo TIỆC BẠN BÈ, VUI HỘI HÈ với chỉ 409k - Còn gì hấp dẫn hơn Combo TIỆC BẠN BÈ, VUI HỘI HÈ gồm 01 Pizza Cao Cấp hoặc Truyền Thống Cỡ Lớn, 01 Pizza Truyền Thống Cỡ Vừa, 06 lon nước 320ml",
+      "id": 4,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Tiec_Ban_Be_Vui_Hoi_He_400x275.jpg",
+      "price": 409000,
+      "title": "TIỆC BẠN BÈ, VUI HỘI HÈ"
+    }
+  ],
+  "kidsbox": [
+    {
+      "discription": "01 Pizza Phô Mai Cao Cấp/ Hawaiian/ Pepperoni Cỡ Nhỏ 01 Khoai Tây Chiên (110g)/ Bánh Cuộn Phô Mai (4 cuộn)/ Bánh Mì Bơ Tỏi (2 miếng) 01 Lon Pepsi/ 7Up/ Mirinda",
+      "id": 5,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/KIDS_BOX_89K_400x275.jpg",
+      "price": 89000,
+      "title": "PHẦN ĂN CHO BÉ 1"
+    },
+    {
+      "discription": "01 Pizza Cỡ Nhỏ Dòng Cao Cấp (Chọn 1 trong 6 loại) 01 Khoai Tây Chiên (110g)/ Bánh Cuộn Phô Mai (4 cuộn)/ Bánh Mì Bơ Tỏi (2 miếng) 01 Lon Pepsi/ 7Up/ Mirinda",
+      "id": 6,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/KIDS_BOX_114K_400x275.jpg",
+      "price": 114000,
+      "title": "PHẦN ĂN CHO BÉ 2"
+    }
+  ],
+  "buy1get3": [
+    {
+      "discription": "Mua 1 Tặng 2: Mua 01 Bánh Pizza Cỡ Lớn Được Tặng Ngay 01 Pepsi/7Up/Mirinda 1.5 L Cùng 01 Pizza Phô Mai Cao Cấp (R)/ 01 Mì Ý Bò Bằm Xốt Cà Chua",
+      "id": 7,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Mua_1_Duoc_3_Large_400x275.jpg",
+      "price": 129000,
+      "title": "MUA 1 ĐƯỢC 3 ( CỠ VỪA)"
+    },
+    {
+      "discription": "Mua 1 Tặng 2: Mua 01 Bánh Pizza Cỡ Vừa Được Tặng Ngay 01 Pepsi/7Up/Mirinda 1.5 L Cùng 01 Pizza Phô Mai Cao Cấp (P)/ 01 Khoai Tây Chiên/ 01 Bánh Cuộn Phô Mai",
+      "id": 8,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Mua_1_Duoc_3_Regular_400x275.jpg",
+      "price": 99000,
+      "title": "MUA 1 ĐƯỢC 3 ( CỠ LỚN)"
+    }
+  ],
+  "mybox": [
+    {
+      "discription": "Dành Cho 1-2 Người 01 Pizza Truyền Thống (Cỡ Nhỏ) 01 Bánh Mì Bơ Tỏi/ Bánh Cuộn Phô Mai/ Khoai Tây Chiên",
+      "id": 9,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/My_Box_99k_400x275.jpg",
+      "price": 99000,
+      "title": "COMBO MY BOX 1"
+    },
+    {
+      "discription": "Dành Cho 1-2 Người 01 Pizza Truyền Thống (Cỡ Nhỏ) 02 Bánh Mì Bơ Tỏi/ Bánh Cuộn Phô Mai/ Khoai Tây Chiên",
+      "id": 10,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/My_Box_129k_400x275.jpg",
+      "price": 129000,
+      "title": "COMBO MY BOX 2"
+    },
+    {
+      "discription": "Dành Cho 1-2 Người 01 Pizza (Cỡ Nhỏ) 02 Bánh Mì Bơ Tỏi/ Bánh Cuộn Phô Mai/ Khoai Tây Chiên",
+      "id": 11,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/My_Box_159k_400x275.jpg",
+      "price": 159000,
+      "title": "COMBO MY BOX 3"
+    },
+    {
+      "discription": "Dành Cho 1-2 Người 01 Pizza (Cỡ Nhỏ) 01 Bánh Mì Bơ Tỏi/ Bánh Cuộn Phô Mai/ Khoai Tây Chiên 01 Cánh Gà Nướng BBQ (2 Miếng)",
+      "id": 12,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/My_Box_179kG_400x275.jpg",
+      "price": 179000,
+      "title": "COMBO MY BOX 4"
+    }
+  ],
+  "combo": [
+    {
+      "discription": "Pizza LIMO dài 1m có đến 3 loại nhân phủ đặc trưng của Pizza Hut cùng khoai tây chiên giòn thơm, vàng ươm. Phù hợp cho nhóm từ 8-10 người.",
+      "id": 13,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/limo_pizza_400x275.jpg",
+      "price": 699000,
+      "title": "LIMO PIZZA"
+    },
+    {
+      "discription": "Dành cho 2 người 01 Pizza Truyền Thống (cỡ vừa) 01 Mỳ Ý Bò Bằm Xốt Cà Chua/ Xà Lách Trộn Cá Ngừ Và Thịt Xông Khói/ Khoai tây chiên 01 Lon Pepsi/ 7UP/ Mirinda",
+      "id": 14,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Them_ban_them_ngon_combo_1_400x275.jpg",
+      "price": 168000,
+      "title": "THÊM BẠN THÊM NGON - COMBO 1"
+    },
+    {
+      "discription": "01 Pizza Pate Lạp Xưởng (Cỡ Vừa), 01 Xà Lách Trộn Cá Ngừ và Thịt Xông Khói/Khoai Tây Chiên/Bánh Cuộn Phô Mai, 02 Lon Nước Ngọt",
+      "id": 15,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Combo_Pate_Moi_Ngon_400x275.jpg",
+      "price": 199000,
+      "title": "COMBO PATE MỚI NGON"
+    },
+    {
+      "discription": "Dành cho 3-4 người 01 Pizza ALC (cỡ vừa) 01 Mì Ý bò bằm sốt cà chua/01 Mì Ý hải sản sốt cà chua 01 Xà Lách Trộn Cá Ngừ Và Thịt Xông Khói/ 01 Phô mai cuộn/ 01 Khoai tây chiên/ 01 Bánh mì bơ tỏi 02 Lon Nước Ngọt Pepsi/ 7UP/ Mirinda",
+      "id": 16,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Them_ban_them_ngon_combo_2_400x275.jpg",
+      "price": 279000,
+      "title": "THÊM BẠN THÊM NGON - COMBO 2"
+    },
+    {
+      "discription": "01 Pizza Pate Lạp Xưởng (Cỡ Vừa), 01 Mỳ Ý Bò Bằm Xốt Cà Chua, 01 Cánh Gà Nướng BBQ (4 miếng), 01 Bánh Cuộn Phô Mai/Khoai Tây Chiên/Bánh Mì Bơ Tỏi, 01 Pepsi/7UP/Mirinda 1.5L",
+      "id": 17,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Combo_Lap_Xuong_Moi_Ngon_400x275.jpg",
+      "price": 399000,
+      "title": "COMBO LẠP XƯỞNG MỚI NGON"
+    },
+    {
+      "discription": "Dành cho 5-6 người 01 Pizza ALC (cỡ lớn) 01 Cánh Gà Nướng BBQ (4 miếng)/ Cánh Gà Chiên Xốt Cay Hàn Quốc (4 miếng) 01 Mì Ý bò bằm sốt cà chua/ 01 Mì Ý hải sản sốt cà chua 01 Xà Lách Trộn Cá Ngừ Và Thịt Xông Khói/ 01 Phô mai cuộn/ 01 Khoai tây chiên/ 01 Bánh mì bơ tỏi 01 Chai Nước Ngọt Pepsi/ 7UP/ Mirinda 1.5L",
+      "id": 18,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Them_ban_them_ngon_combo_3_400x275.jpg",
+      "price": 499000,
+      "title": "THÊM BẠN THÊM NGON - COMBO 3"
+    }
+  ]
+}

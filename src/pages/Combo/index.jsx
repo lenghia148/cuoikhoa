@@ -11,7 +11,7 @@ const Combo = () => {
            {
                
                 try {
-                    const res = await axios.get('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/combo.json')
+                    const res = await axios.get('http://localhost:8000/combo')
                     setData(Object.values(res.data))
                 } catch (error) {
                     console.log('errror');
@@ -21,7 +21,7 @@ const Combo = () => {
     {
         getData()
     },[])
-   console.log(data);
+   
   return (
     <div className={styles.menu}>
       <div className={styles.content}>

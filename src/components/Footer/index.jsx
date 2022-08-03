@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
         </div>
         <hr/>
-        <div className={`${styles.footerPartTwo}`}>
+        <div className={styles.footerPartTwo}>
                 <div>
                     <div>
                         <p>Công ty TNHH Pizza Việt Nam</p>

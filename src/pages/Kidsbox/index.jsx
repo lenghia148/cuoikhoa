@@ -7,21 +7,85 @@ import styles from './Kidsbox.module.css'
 const Kidsbox = () => {
   const [data,setData] = useState([])
   const [error,setError] = useState(false)
+  const [products,setProducts] = useState([])
   const getData = async () =>
-         {
-             
-              try {
-                  const res = await axios.get('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/kidsbox.json')
-                  setData(Object.values(res.data))
-              } catch (error) {
-                  console.log('errror');
-              }
-         }
-  useEffect(()=>
-  {
-      getData()
-  },[])
- console.log(data);
+           {
+               
+                try {
+                    const res = await axios.get('http://localhost:8000/kidsbox')
+                    
+                    setData(Object.values(res.data))
+                } catch (error) {
+                    console.log('errror');
+                }
+           }
+    const getItemShopCart = async () =>
+    {   
+      
+       try {
+        const res = await axios.get('http://localhost:7000/shopcart')
+        setProducts(Object.values(res.data))
+        
+      
+       } catch (error) {
+        console.log('errror');
+       }
+    }    
+    useEffect(()=>
+    {
+        getData()
+        getItemShopCart()
+    },[])
+    
+  
+    const handlerAddShopCart =  async (item,id) =>
+    {   
+       getItemShopCart()
+        if (products.some((a)=>
+        {   
+          return a.title === item.title
+        }))  
+        {
+          try {
+           const res = await axios.put(
+            `http://localhost:7000/shopcart/${id}`,{
+              ...item,
+              count : 2
+            }) 
+            // console.log(res);
+          } catch (error) {
+            
+          }
+        } 
+        else {
+          try {
+            await axios.post(
+             `http://localhost:7000/shopcart/`,{
+              ...item,
+               count : 1
+             }) 
+          
+         } 
+         catch (error) {
+           console.log('errror');
+         } 
+        }
+      
+    }
+    useEffect(()=>{
+      handlerDelete()
+    },[])
+   const handlerDelete = async (id) =>
+   {
+      //  try {
+      //    await axios.delete(`http://localhost:7000/shopcart`,item)
+        
+      //  } catch (error) {
+      //    console.log('error');
+      //  }
+   }
+ 
+
 return (
   <div className={styles.menu}>
     <div className={styles.content}>
@@ -41,7 +105,7 @@ return (
                             <hr className={styles.line} />
                               <div className={styles.price}>
                                   <p>Giá chỉ từ <span>{item.price}</span> đ</p>
-                                  <button>CHỌN</button>
+                                  <button onClick={()=>handlerAddShopCart(item,item.id)}>CHỌN</button>
                               </div>
                          </div>
               })}

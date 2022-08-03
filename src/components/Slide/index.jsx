@@ -10,11 +10,11 @@ const Slide = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/slide.json"
+        "http://localhost:7000/slide"
       );
       
       setLoading(false);
-      setDatabase(Object.values(res.data));
+      setDatabase(Object.values(res.data[0]));
         
     } catch (error) {
       setError(true);

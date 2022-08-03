@@ -7,21 +7,43 @@ import axios  from 'axios'
 const Buy1Get3 = () => {
   const [data,setData] = useState([])
   const [error,setError] = useState(false)
+  const [product,setProduct] = useState([])
+  const [item,setItem] = useState({})
+  const getShopCart = async () =>
+  {
+     try { 
+      const res = await axios.get('http://localhost:7000/shopcart')
+      setProduct(Object.values(res.data))
+     } catch (error) {
+      console.log('error');
+     }
+  }
   const getData = async () =>
          {
              
               try {
-                  const res = await axios.get('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/buy1get3.json')
+                  const res = await axios.get('http://localhost:8000/buy1get3')
                   setData(Object.values(res.data))
               } catch (error) {
-                  console.log('errror');
+                  console.log('error');
               }
          }
   useEffect(()=>
   {
       getData()
+      getShopCart()
   },[])
- console.log(data);
+const handlerBuy =  async (item)=>
+{
+  // setItem(item)
+  // try {
+  //     await axios.post('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart.json',item)
+  //     getShopCart()
+  // } catch (error) {
+  //   console.log('error');
+  // }
+}
+
 return (
   <div className={styles.menu}>
     <div className={styles.content}>
@@ -41,14 +63,14 @@ return (
                             <hr className={styles.line} />
                               <div className={styles.price}>
                                   <p>Giá chỉ từ <span>{item.price}</span> đ</p>
-                                  <button>CHỌN</button>
+                                  <button onClick={()=>handlerBuy(item)}>CHỌN</button>
                               </div>
                          </div>
               })}
       </div>
     </div>
     <div className={styles.shopcart}>
-      <Shopcart/>
+      <Shopcart product={product}/>
     </div>
   </div>
 )

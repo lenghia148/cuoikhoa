@@ -5,7 +5,7 @@ import Combo from '../pages/Combo'
 import Kidsbox from '../pages/Kidsbox'
 import Mybox from '../pages/Mybox'
 import Buy1Get3 from '../pages/Buy1Get3'
-import Pizza from '../pages/Pizza'
+
 
 
 //Public routes
@@ -17,7 +17,7 @@ export const publicRoutes = [
         { path:'/kidsbox',component: Kidsbox},
         { path:'/mybox',component: Mybox},
         { path:'/buy1get3',component: Buy1Get3},
-        { path:'/pizza',component: Pizza},
+       
         { path:'/happysummer',component: HappySummer},
         
    

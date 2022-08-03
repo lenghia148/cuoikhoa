@@ -14,11 +14,13 @@ const HappySummer = () => {
     const [products,setProducts] = useState([])
     const [isDelete,setIsDelete] = useState(false)
     const [id,setId] = useState(0) 
+    const [count,setCount] = useState(0)
     const getData = async () =>
            {
                
                 try {
-                    const res = await axios.get('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/happysummer.json')
+                    const res = await axios.get('http://localhost:8000/happysummer')
+                    
                     setData(Object.values(res.data))
                 } catch (error) {
                     console.log('errror');
@@ -28,55 +30,68 @@ const HappySummer = () => {
     {   
       
        try {
-        const res = await axios.get('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart.json')
-        setProduct(Object.values(res.data))
+        const res = await axios.get('http://localhost:7000/shopcart')
+        setProducts(Object.values(res.data))
+        
+      
        } catch (error) {
         console.log('errror');
        }
-    } 
-     
+    }    
     useEffect(()=>
     {
         getData()
         getItemShopCart()
-        
     },[])
     
-    useEffect(()=>
-    {
-      handlerAddShopCart()
-    },[flag])
-    const handlerAdd = (item,id)=>
-    {
-      setId(id)
-      setItem(item)
-      setFlag(!flag)
-    }
-    const handlerAddShopCart =  async (items) =>
+  
+    const handlerAddShopCart =  async (item,id) =>
     {   
-        // setItem(items)
-        try {
-           await axios.post(
-            `https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart/item${id}.json`,item) 
-            getItemShopCart()  
+       getItemShopCart()
+        if (products.some((a)=>
+        {   
+          return a.discription === item.discription
+        }))  
+        {
+          try {
+            await axios.put(
+            `http://localhost:7000/shopcart/${id}`,{
+              ...item,
+              count :  2
+            }) 
+            // console.log(res);
+          } catch (error) {
+            
+          }
         } 
-        catch (error) {
-          console.log('errror');
-        } 
+        else {
+          try {
+            await axios.post(
+             `http://localhost:7000/shopcart/`,{
+             ...item,
+               count : 1
+             }) 
+          
+         } 
+         catch (error) {
+           console.log('errror');
+         } 
+        }
+      
     }
     useEffect(()=>{
       handlerDelete()
     },[isDelete])
    const handlerDelete = async (id) =>
    {
-       try {
-         await axios.delete(`https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart/-N8UHstGiJkEjb6yot5o.json`)
+      //  try {
+      //    await axios.delete(`http://localhost:7000/shopcart`,item)
         
-       } catch (error) {
-         console.log('error');
-       }
+      //  } catch (error) {
+      //    console.log('error');
+      //  }
    }
-   
+ 
   return (
     <div className={styles.menu}>
       <div className={styles.content}>
@@ -96,7 +111,7 @@ const HappySummer = () => {
                               <hr className={styles.line} />
                               <div className={styles.price}>
                                 <p>Giá chỉ từ <span>{item.price}</span> đ</p>
-                                <button onClick={()=>handlerAdd(item,item.id)}>CHỌN</button>
+                                <button onClick={()=>handlerAddShopCart(item,item.id)}>CHỌN</button>
                               </div>
                             </div>
                 })}

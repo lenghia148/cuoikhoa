@@ -5,25 +5,45 @@ import styles from './Shopcart.module.css'
 const Shopcart = (props) => {
   const {product,item,handlerDelete} = props
   const [products,setProducts] = useState([])
+
   const [items,setItems] = useState([])
+
+  
+
   const getItemShopCart = async () =>
     {   
       
        try {
-        const res = await axios.get('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart.json')
-        // console.log([...res.data]);
+        const res = await axios.get('http://localhost:7000/shopcart')
+
+
+        
        
         setProducts([[res.data][0]])
+
+        setProducts([res.data])
+        // let resItems = Object.keys(res.data).length
+        // let resValue = Object.values(res.data)  
+        // var resTotal = []
+        // for (let i =0; i<resItems.length;i++)
+        //    {
+            
+        //    } 
+          
+        // console.log(resValue);
+
        } catch (error) {
-        console.log('errror');
+        console.log('error');
        }
     } 
     useEffect(()=>
     {
       getItemShopCart()
     },[])
-  console.log(products);
+
+
   
+
   return (
     <div className={styles.container}>
       <h2>-----Giỏ Hàng------</h2>
