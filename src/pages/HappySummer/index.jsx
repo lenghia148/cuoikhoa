@@ -57,7 +57,7 @@ const HappySummer = () => {
         // setItem(items)
         try {
            await axios.post(
-            `https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart/${id}.json`,item) 
+            `https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/shopcart/item${id}.json`,item) 
             getItemShopCart()  
         } 
         catch (error) {
