@@ -5,14 +5,14 @@ import styles from './Promotion.module.css'
 const Promotion = () => {
   const [imgPromotion,setImgPromotion] = useState([])
   const [loading,setLoading] = useState(false)
-  const [error,setError] = useState(false)
+ 
   const getData = async () =>
   {
     try {
       const res = await axios.get('https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/promotion.json')
       setImgPromotion(Object.values(res.data)) 
     } catch (error) {
-      
+      console.log('error');
     }
   }
   useEffect(()=>{
@@ -27,8 +27,8 @@ const Promotion = () => {
       <div className={styles.imgPro}>
       {
         imgPromotion.map((img,index)=>{
-          return <div className={styles.image_holder}>
-                      <Link to='/happysummer' key={index} ><img className={styles.image} src={img}/></Link>
+          return <div className={styles.image_holder} key={img}>
+                    <Link to='/happysummer'><img className={styles.image} src={img}/></Link> 
                 </div>
         })
       }

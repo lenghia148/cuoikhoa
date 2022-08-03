@@ -1,0 +1,12 @@
+.container
+{
+   overflow-y: scroll;
+   height: 500px;
+}
+.items
+{
+    display: flex;
+    height: 50px;
+    margin: 10px;
+    
+}
