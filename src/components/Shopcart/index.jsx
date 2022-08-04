@@ -3,75 +3,73 @@ import axios from 'axios'
 import styles from './Shopcart.module.css'
 
 const Shopcart = (props) => {
-  const {product,item,handlerDelete} = props
-  const [products,setProducts] = useState([])
-
+  const {getItemShopCart,products,isPost,setIsPost} = props
+  const [data,setData] = useState([])
   const [items,setItems] = useState([])
-
+  useEffect(()=>{
+    getItemShopCart()
+    getData()
+  },[isPost])
+  const handlerDelete = async (idItem) => {
+    
+    try {
+      await axios.delete(
+        `http://localhost:7000/shopcart/${idItem}`)
+        getItemShopCart()
+        
+    }
+    catch (error) {
+      console.log('errror');
+    }
   
-
-  const getItemShopCart = async () =>
-    {   
+  }
+  const getData = async () =>
+  {
       
        try {
-        const res = await axios.get('http://localhost:7000/shopcart')
+           const res = await axios.get('http://localhost:7000/shopcart')
 
-
-        
-       
-        setProducts([[res.data][0]])
-
-        setProducts([res.data])
-        // let resItems = Object.keys(res.data).length
-        // let resValue = Object.values(res.data)  
-        // var resTotal = []
-        // for (let i =0; i<resItems.length;i++)
-        //    {
-            
-        //    } 
-          
-        // console.log(resValue);
-
+           setData(Object.values(res.data))
+           
+            let count = data.reduce((previousValue,currentIndex,index)=>
+            {
+                return previousValue = previousValue + currentIndex.price
+            },0)
+           setItems(count)
        } catch (error) {
-        console.log('error');
+           console.log('errror');
        }
-    } 
-    useEffect(()=>
-    {
-      getItemShopCart()
-    },[])
-
-
-  
-
+  }
+  console.log(items);
   return (
+    <>
     <div className={styles.container}>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <h2>-----Giỏ Hàng------</h2>
        {
-          (products.length==0)?<h1>Nothing</h1>:('hello'
-            // products.forEach((item,index)=>
-            // {
-               
-            //   { 
-                  
-            //   //   console.log(a);
-            //   //   return <div key={b} className={styles.items}>
-            //   //   <img src={a.imgscr}></img>
-            //   //   <h6>{a.title}</h6>
-            //   //   <h6>{a.price}</h6>
-            //   //   <h6>Số Lượng</h6>
-            //   //   {/* <button onClick={()=>handlerDelete(a.id)}>X</button> */}
-            //   // </div>
-            //   }
-             
-            // })
-            
+          (products.length==0)?<h1>Nothing</h1>:(
+            products.map((item,index)=>
+            {             
+              {         
+                return <div key={index} className={styles.items}>
+                <img src={item.imgscr}></img>
+                <h6>{item.title}</h6>
+                <h5>{item.price}</h5>
+                <input type="number"  className={styles.count} defaultValue={item.count}></input>
+                <button onClick={()=>handlerDelete(item.id)}>X</button>
+              </div>
+              }
+            })
           )
-          
         }
-       
-      
+        
     </div>
+    <div className={styles.payment}> 
+    <div>{items}</div>
+    <div>VAT</div>
+    <button>THANH TOÁN</button>
+ </div>
+ </>
   )
 }
 

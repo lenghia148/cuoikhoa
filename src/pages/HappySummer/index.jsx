@@ -13,6 +13,7 @@ const HappySummer = () => {
     const [items,setItems] = useState({})
     const [products,setProducts] = useState([])
     const [isDelete,setIsDelete] = useState(false)
+    const [isPost,setIsPost] = useState(0)
     const [id,setId] = useState(0) 
     const [count,setCount] = useState(0)
     const getData = async () =>
@@ -20,7 +21,7 @@ const HappySummer = () => {
                
                 try {
                     const res = await axios.get('http://localhost:8000/happysummer')
-                    
+
                     setData(Object.values(res.data))
                 } catch (error) {
                     console.log('errror');
@@ -33,7 +34,6 @@ const HappySummer = () => {
         const res = await axios.get('http://localhost:7000/shopcart')
         setProducts(Object.values(res.data))
         
-      
        } catch (error) {
         console.log('errror');
        }
@@ -42,9 +42,13 @@ const HappySummer = () => {
     {
         getData()
         getItemShopCart()
-    },[])
-    
-  
+    },[isPost])
+ 
+   const handlerAdd = (item,id)=>
+   {
+      handlerAddShopCart(item,id)
+      setIsPost((prev) => prev +1)
+   }
     const handlerAddShopCart =  async (item,id) =>
     {   
        getItemShopCart()
@@ -59,7 +63,7 @@ const HappySummer = () => {
               ...item,
               count :  2
             }) 
-            // console.log(res);
+            getItemShopCart()
           } catch (error) {
             
           }
@@ -79,17 +83,10 @@ const HappySummer = () => {
         }
       
     }
-    useEffect(()=>{
-      handlerDelete()
-    },[isDelete])
+
    const handlerDelete = async (id) =>
    {
-      //  try {
-      //    await axios.delete(`http://localhost:7000/shopcart`,item)
-        
-      //  } catch (error) {
-      //    console.log('error');
-      //  }
+      
    }
  
   return (
@@ -111,14 +108,14 @@ const HappySummer = () => {
                               <hr className={styles.line} />
                               <div className={styles.price}>
                                 <p>Giá chỉ từ <span>{item.price}</span> đ</p>
-                                <button onClick={()=>handlerAddShopCart(item,item.id)}>CHỌN</button>
+                                <button onClick={()=>handlerAdd(item,item.id)}>CHỌN</button>
                               </div>
                             </div>
                 })}
         </div>
       </div>
       <div className={styles.shopcart}>
-        <Shopcart product={product} item={item} handlerDelete={handlerDelete} items={items}/>
+        <Shopcart products={products}  getItemShopCart ={getItemShopCart} isPost={isPost} handlerDelete={handlerDelete} items={items} setIsPost={setIsPost}/>
       </div>
     </div>
   )

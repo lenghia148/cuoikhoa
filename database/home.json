@@ -13,54 +13,5 @@
     }
   ],
   "users": [],
-  "shopcart": [
-    {
-      "discription": "Combo THÊM NHIỆT MÙA HÈ với chỉ 219K - Còn gì hấp dẫn hơn Combo THÊM NHIỆT MÙA HÈ, gồm 01 bánh Pizza Dòng Truyền Thống cỡ vừa, 01 Xà Lách Gà Pesto/ Xà Lách Trộn Cá Ngừ Và Thịt Xông Khói, dùng kèm 02 lon nước 320ml tròn vị.",
-      "id": 1,
-      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Them_Nhiet_Mua_He_400x275.jpg",
-      "price": 299000,
-      "title": "THÊM NHIỆT MÙA HÈ",
-      "count": 2
-    },
-    {
-      "discription": "Combo HÈ NGON BẤT TẬN với chỉ 389k - Còn gì hấp dẫn hơn Combo HÈ NGON BẤT TẬN, gồm 01 Pizza Cao Cấp hoặc Truyền Thống Cỡ Lớn, 01 Cánh Gà Nướng BBQ/ Cánh Gà Chiên Xốt Cay Hàn Quốc (6 miếng), 04 lon nước 320ml",
-      "id": 3,
-      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/He_Ngon_Bat_Tan_400x275.jpg",
-      "price": 389000,
-      "title": "HÈ NGON BẤT TẬN",
-      "count": 1
-    },
-    {
-      "discription": "Combo NHÂN ĐÔI VỊ HÈ với chỉ 299K - Còn gì hấp dẫn hơn Combo NHÂN ĐÔI VỊ HÈ, gồm 01 bánh Pizza Dòng Cao Cấp và 01 bánh Pizza Dòng Truyền Thống, đồng cỡ bánh Vừa, dùng kèm 04 lon nước 320ml tròn vị.",
-      "id": 2,
-      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Nhan_Doi_Vi_He_400x275.jpg",
-      "price": 299000,
-      "title": "NHÂN ĐÔI MÙA HÈ",
-      "count": 2
-    },
-    {
-      "discription": "Combo TIỆC BẠN BÈ, VUI HỘI HÈ với chỉ 409k - Còn gì hấp dẫn hơn Combo TIỆC BẠN BÈ, VUI HỘI HÈ gồm 01 Pizza Cao Cấp hoặc Truyền Thống Cỡ Lớn, 01 Pizza Truyền Thống Cỡ Vừa, 06 lon nước 320ml",
-      "id": 4,
-      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Tiec_Ban_Be_Vui_Hoi_He_400x275.jpg",
-      "price": 409000,
-      "title": "TIỆC BẠN BÈ, VUI HỘI HÈ",
-      "count": 2
-    },
-    {
-      "discription": "01 Pizza Phô Mai Cao Cấp/ Hawaiian/ Pepperoni Cỡ Nhỏ 01 Khoai Tây Chiên (110g)/ Bánh Cuộn Phô Mai (4 cuộn)/ Bánh Mì Bơ Tỏi (2 miếng) 01 Lon Pepsi/ 7Up/ Mirinda",
-      "id": 5,
-      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/KIDS_BOX_89K_400x275.jpg",
-      "price": 89000,
-      "title": "PHẦN ĂN CHO BÉ 1",
-      "count": 2
-    },
-    {
-      "discription": "01 Pizza Cỡ Nhỏ Dòng Cao Cấp (Chọn 1 trong 6 loại) 01 Khoai Tây Chiên (110g)/ Bánh Cuộn Phô Mai (4 cuộn)/ Bánh Mì Bơ Tỏi (2 miếng) 01 Lon Pepsi/ 7Up/ Mirinda",
-      "id": 6,
-      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/KIDS_BOX_114K_400x275.jpg",
-      "price": 114000,
-      "title": "PHẦN ĂN CHO BÉ 2",
-      "count": 2
-    }
-  ]
+  "shopcart": []
 }
