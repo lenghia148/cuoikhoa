@@ -1,7 +1,11 @@
 import React,{useState,useEffect} from "react";
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 import styles from "./Login.module.css";
-const Login = () => {
+import Example from "../Notifications";
+
+import Notifications from "../Notifications";
+const Login = ({acount,setAcount,isUser,setIsUser}) => {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -12,10 +16,11 @@ const Login = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/user.json"
+        "http://localhost:7000/users"
       );     
       setLoading(false);
       setDatabase(Object.values(res.data));
+      console.log(database);
     
     } catch (error) {
       console.log('hello error');
@@ -33,19 +38,32 @@ const Login = () => {
         return (item.mail ===mail &&  item.password === password)
     })
     if (userLogin!=null)
-    {
+    { 
+      setAcount(false)
+      setIsUser(true)
+      userLoginNow(userLogin)
       alert('success')
     }
     else{
       alert('fail')
     }
   }
+  const userLoginNow = async (user)=>
+  {
+    try {
+       await axios.post('http://localhost:7000/user',user)
+    } catch (error) {
+      console.log('error');
+    }
+  }
   return (
+    
     <form className={styles.form_login}>
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       ></link>
+      <a className={styles.closeBnt} onClick={()=>setAcount(false)}><img src="https://cdn.pizzahut.vn/images/Web_V3/Member/close.png" alt="" /></a>
       <div className={styles.img_login}>
         <img
           src="https://cdn.pizzahut.vn/images/Web_V3/Member/EN-1548x1557.jpg"
@@ -56,27 +74,31 @@ const Login = () => {
         <div className={styles.container_header}>
           <h1>🍕🍕 WELCOME BACK!</h1>
           <h2>
-            YOU'VE REGISTERED AS HUT REWARDS MEMBER. MAKE SURE YOU LOGIN BEFORE
-            CHECKOUT TO EARN POINTS FOR FREE PIZZAS!
-          </h2>
+                BẠN ĐÃ LÀ THÀNH VIÊN HUT REWARDS!
+          </h2> 
+          <h2>ĐĂNG NHẬP
+              TRƯỚC KHI THANH TOÁN ĐỂ TÍCH ĐIỂM – ĐỔI PIZZA NHÉ!</h2>
+          
         </div>
-        <label>Email *</label>
+        <label><h4>Email *</h4></label>
         <input type="email" value={mail} className={styles.input}
               onChange={(e) =>
               setMail(e.target.value)
             }></input>
-        <label>Mật khẩu *</label>
+        <label><h4>Mật khẩu *</h4></label>
         <input type="password" value={password} className={styles.input}
               onChange={(e) =>
               setPassword(e.target.value)}
              ></input>
-        <button onClick={handlerSubmit}>LOGIN</button>
+        <button onClick={handlerSubmit} className={styles.loginBnt}>ĐĂNG NHẬP</button>
         <div className={styles.register_message}>
-          Bạn chưa có tài khoản? <a>Đăng ký ngay</a> hoặc tìm hiểu thêm về Điều
-          khoản và Quyền lợi Thành viên
+          Bạn chưa có tài khoản? <Link to={'./signup'} className={styles.signupLink}>Đăng ký ngay</Link> hoặc tìm hiểu thêm về Điều
+          khoản và Quyền lợi Thành viên 
         </div>
+        
       </div>
     </form>
+
   );
 };
 

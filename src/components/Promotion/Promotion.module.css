@@ -1,9 +1,21 @@
+.Container {
+    height: 34px;
+    display: flex;
+    z-index: -1;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    margin-top: 50px;
+    
+}
 .imgPro 
 {
     display: flex;
-    width: 100%;
+    width: 82%;
     flex-wrap: wrap;
     box-sizing: border-box;
+    margin: auto;
 }
 
 .image_holder {
@@ -21,30 +33,24 @@
 
 .btnMenu
 {
-    width: 80vw;
-    margin-left: 10%;
+    width: 79.6vw;
+    margin-left: 9.8%;
     background-color: #0A8020;
     height: 40px;
     border-radius: 5px;
     border-color: transparent;
     color: white;
     font-size:medium;
-    text-decoration: none;    
+    text-decoration: none;  
+    margin-bottom: 20px;  
+    
 }
 .link
 {
     text-decoration: none;
     color: white;
 }
-.Container {
-    height: 34px;
-    display: flex;
-    z-index: -1;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background-color: #fafafa;
-}
+
 
 .Underline {
     width: 100%;

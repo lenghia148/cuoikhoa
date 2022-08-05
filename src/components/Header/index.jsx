@@ -1,9 +1,27 @@
 import {Routes,Route,Link} from 'react-router-dom'
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import styles from './Header.module.css'
+import axios from 'axios'
 
 const Header = (props) => {
-const {acount,setAcount} = props
+  const [data,setData] = useState([])
+  const [name,setName] = useState('')
+const userLogin = async ()=>
+{
+  try {
+    const res = await axios.get('http://localhost:7000/user')
+    setData(Object.values(res.data))
+    setName(data[0].name)
+    
+  } catch (error) {
+    
+  }
+}
+useEffect(()=>
+{
+  userLogin()
+},[])
+const {acount,setAcount,isUser,setIsUser} = props
   return (   
     <header className={styles.wrapper}>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -16,7 +34,10 @@ const {acount,setAcount} = props
            </div>
            <div className={styles.right}>
               <a className={styles.bell}><i className="fa fa-bell"></i></a>
-              <a className={styles.user} onClick={()=>setAcount(!acount)}><i className="fa fa-user"></i> Acount</a>
+              <a className={styles.user} onClick={()=>setAcount(true)}><i className="fa fa-user"></i> 
+              {
+                name?`Hi ${name}`: 'Acount'  
+              }</a>
               </div>
 
         </div>

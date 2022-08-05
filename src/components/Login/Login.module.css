@@ -1,6 +1,7 @@
 
 .form_login
 {
+    background-color: white;
     width: 900px;
     height: 500px;
     border: 1px solid black;
@@ -11,6 +12,25 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    border: 1px solid gray;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%),
+    0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+.closeBnt
+{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top:-15px;
+    right: 0;
+    z-index: 5;
+    cursor: pointer;
+}
+.closeBnt>img 
+{
+    width: 40px;
+    height: 35px;
 }
 .img_login img
 {
@@ -21,7 +41,11 @@
 {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+    
 }
 
 .container_header {
@@ -44,7 +68,9 @@
 
 .input {
     width: 100%;
-    height: 7.5%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 8.5%;
     border: 0.2px solid black;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -55,5 +81,27 @@
 }
 
 .register_message {
-    margin-top: 10px;
+    margin-top: 5%;
+}
+.loginBnt
+{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+    height: 7.5%;
+    color: white;
+    background-color: #0A8020 ;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%),
+    0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+.signupLink
+{
+    color: #0A8020;
+    cursor: pointer;
+    text-decoration: none;
+    
 }

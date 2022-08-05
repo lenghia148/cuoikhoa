@@ -15,7 +15,8 @@ const HappySummer = () => {
     const [isDelete,setIsDelete] = useState(false)
     const [isPost,setIsPost] = useState(0)
     const [id,setId] = useState(0) 
-    const [count,setCount] = useState(0)
+    // const [countItem,setCountItem] = useState(0)
+    var countItem
     const getData = async () =>
            {
                
@@ -49,24 +50,17 @@ const HappySummer = () => {
       handlerAddShopCart(item,id)
       setIsPost((prev) => prev +1)
    }
+     
     const handlerAddShopCart =  async (item,id) =>
     {   
-       getItemShopCart()
-        if (products.some((a)=>
+    
+      
+        if (products.some((currentItem)=>
         {   
-          return a.discription === item.discription
+          return currentItem.title === item.title
         }))  
         {
-          try {
-            await axios.put(
-            `http://localhost:7000/shopcart/${id}`,{
-              ...item,
-              count :  2
-            }) 
-            getItemShopCart()
-          } catch (error) {
-            
-          }
+          alert('SẢN PHẨM ĐÃ CÓ TRONG GIỎ HÀNG')
         } 
         else {
           try {
@@ -84,11 +78,6 @@ const HappySummer = () => {
       
     }
 
-   const handlerDelete = async (id) =>
-   {
-      
-   }
- 
   return (
     <div className={styles.menu}>
       <div className={styles.content}>
@@ -115,7 +104,7 @@ const HappySummer = () => {
         </div>
       </div>
       <div className={styles.shopcart}>
-        <Shopcart products={products}  getItemShopCart ={getItemShopCart} isPost={isPost} handlerDelete={handlerDelete} items={items} setIsPost={setIsPost}/>
+        <Shopcart products={products}  getItemShopCart ={getItemShopCart} isPost={isPost}  items={items} setIsPost={setIsPost} countItem={countItem}/>
       </div>
     </div>
   )

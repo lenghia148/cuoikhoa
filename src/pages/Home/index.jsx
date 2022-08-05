@@ -7,11 +7,18 @@ import Slide from '../../components/Slide'
 import Login from '../../components/Login'
 const Home = () => {
   const [acount,setAcount] = useState(false)
+  const [isUser,setIsUser] = useState(false)
 
   return (
     <div>
-     <Header acount={acount} setAcount={setAcount}/>
-     {acount&&<Login/>}
+     <Header acount={acount} setAcount={setAcount} isUser={isUser} setIsUser={setIsUser}/>
+     {acount&&
+     <Login 
+        acount={acount} 
+        setAcount={setAcount} 
+        isUser={isUser} 
+        setIsUser={setIsUser} 
+      />}
      <Slide/>
      <Promotion/>
      <Footer/>

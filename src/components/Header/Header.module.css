@@ -34,10 +34,18 @@
 
 }
 .bell
-{
+{   
+    font-size: x-large;
     cursor: pointer;
+    margin-right: 80px;
 }
 .user
-{
+{   
+    font-size: x-large;
     cursor: pointer;
+    
+}
+.user>i
+{
+    margin-right: 10px;
 }

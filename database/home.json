@@ -12,6 +12,33 @@
       "img3": "https://cdn.pizzahut.vn/images/Web_V3/Homepage/VN-Web-Hompage-BOGO-REG_MN6EL_120720221019.jpg"
     }
   ],
-  "users": [],
-  "shopcart": []
+  "users": [
+    {
+      "name": "nghia111",
+      "phoneNumer": "0988095555",
+      "password": "1",
+      "mail": "1@.com",
+      "birthDay": "2022-08-03",
+      "id": 1
+    },
+    {
+      "name": "nghia111",
+      "phoneNumer": "0988095555",
+      "password": "nghia123",
+      "mail": "lel@gmail.com",
+      "birthDay": "2022-08-03",
+      "id": 2
+    }
+  ],
+  "shopcart": [],
+  "user": [
+    {
+      "name": "nghia111",
+      "phoneNumer": "0988095555",
+      "password": "1",
+      "mail": "1@.com",
+      "birthDay": "2022-08-03",
+      "id": 1
+    }
+  ]
 }

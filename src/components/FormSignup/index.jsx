@@ -18,7 +18,7 @@ const FormSignup = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/user.json"
+        "http://localhost:7000/users"
       );
      
       setLoading(false);
@@ -43,7 +43,7 @@ const FormSignup = () => {
       if(checkbox1 && checkbox2 )
         {
           await axios.post(
-            "https://cuoikhoa-eedb4-default-rtdb.asia-southeast1.firebasedatabase.app/user.json",user
+            "http://localhost:7000/users",user
           );
           getData();
           setLoading(false);
@@ -61,8 +61,8 @@ const FormSignup = () => {
     <div className={styles.container}>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <div><img src="https://cdn.pizzahut.vn/images/Web_V3/Member/3054x201.jpg" alt="" /></div>
-      <h1>🍕🍕 TÍCH ĐIỂM ĐỔI PIZZA NÀO!</h1>
-      <h3>THAM GIA HUT REWARDS
+      <h2 className={styles.h2}>🍕🍕 TÍCH ĐIỂM ĐỔI PIZZA NÀO!</h2>
+      <h3 className={styles.h3}>THAM GIA HUT REWARDS
       VÀ BẮT ĐẦU HÀNH TRÌNH TÍCH ĐIỂM CỦA BẠN!</h3>
     <form action="" className={styles.form}>
       <div className={styles.form_right}>
@@ -84,20 +84,21 @@ const FormSignup = () => {
           <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
           <label htmlFor="">Xác nhận mật khẩu *</label>
           <input type="password" />
-          <div>Mật khẩu ít nhất 8 ký tự và đáp ứng 4 điều kiện sau:</div>
+          <div className={styles.note}><h3>Mật khẩu ít nhất 8 ký tự và đáp ứng 4 điều kiện sau:</h3>
           <div>Các số 0-9. Ví dụ: 2, 6, 7</div>
           <div>Các chữ cái thường (nhỏ) a-z. Ví dụ: a, e, r</div>
           <div>Chữ cái viết hoa (in hoa) A-Z. Ví dụ: A, E, R</div>
           <div>Các ký tự đặc biệt như !@#$</div>
+          </div>
           <div className={styles.confirm_one}>
-        <input type="checkbox" className={styles.confirm_checkbox} name=""  defaultChecked={checkbox2}  onChange={()=>setCheckbox2(!checkbox2)}/>
-        <div>
-Tôi đồng ý trở thành Thành viên Hut Rewards và chấp nhận các Điều khoản & Điều kiện và Chính sách bảo mật của Pizza Hut.</div>
-      </div>
+        <input type="checkbox" className={styles.confirm_checkbox2} name=""  defaultChecked={checkbox2}  onChange={()=>setCheckbox2(!checkbox2)}/>
+        <div className={styles.confirm_checkbox3}>
+              Tôi đồng ý trở thành Thành viên Hut Rewards và chấp nhận các Điều khoản & Điều kiện và Chính sách bảo mật của Pizza Hut.</div>
+        </div>
         </div>
   
       </form>
-      <button type="submit" onClick={handlerSubmitRe}>ĐĂNG KÝ</button>
+      <button type="submit" onClick={handlerSubmitRe} className={styles.resigerBnt}>ĐĂNG KÝ</button>
     </div>
   );
 };
