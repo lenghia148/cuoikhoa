@@ -18,6 +18,7 @@
     align-items: center;
     list-style: none;
     cursor: pointer;
+    position: relative;
 }
 .link
 {
@@ -30,6 +31,7 @@
     font-size: 15px;
     color: black;
     padding: 15px;
+    z-index: 1;
 }
 
 .content li:hover a {
