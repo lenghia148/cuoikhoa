@@ -22,7 +22,7 @@
       "id": 1
     },
     {
-      "name": "nghia111",
+      "name": "Nghĩa",
       "phoneNumer": "0988095555",
       "password": "nghia123",
       "mail": "lel@gmail.com",
@@ -30,7 +30,40 @@
       "id": 2
     }
   ],
-  "shopcart": [],
+  "shopcart": [
+    {
+      "discription": "Dành cho 3-4 người 01 Pizza ALC (cỡ vừa) 01 Mì Ý bò bằm sốt cà chua/01 Mì Ý hải sản sốt cà chua 01 Xà Lách Trộn Cá Ngừ Và Thịt Xông Khói/ 01 Phô mai cuộn/ 01 Khoai tây chiên/ 01 Bánh mì bơ tỏi 02 Lon Nước Ngọt Pepsi/ 7UP/ Mirinda",
+      "id": 16,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Them_ban_them_ngon_combo_2_400x275.jpg",
+      "price": 279000,
+      "title": "THÊM BẠN THÊM NGON - COMBO 2",
+      "count": 1
+    },
+    {
+      "discription": "01 Pizza Pate Lạp Xưởng (Cỡ Vừa), 01 Xà Lách Trộn Cá Ngừ và Thịt Xông Khói/Khoai Tây Chiên/Bánh Cuộn Phô Mai, 02 Lon Nước Ngọt",
+      "id": 15,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Combo_Pate_Moi_Ngon_400x275.jpg",
+      "price": 199000,
+      "title": "COMBO PATE MỚI NGON",
+      "count": 1
+    },
+    {
+      "discription": "Mua 1 Tặng 2: Mua 01 Bánh Pizza Cỡ Vừa Được Tặng Ngay 01 Pepsi/7Up/Mirinda 1.5 L Cùng 01 Pizza Phô Mai Cao Cấp (P)/ 01 Khoai Tây Chiên/ 01 Bánh Cuộn Phô Mai",
+      "id": 8,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Mua_1_Duoc_3_Regular_400x275.jpg",
+      "price": 99000,
+      "title": "MUA 1 ĐƯỢC 3 ( CỠ LỚN)",
+      "count": 1
+    },
+    {
+      "discription": "Mua 1 Tặng 2: Mua 01 Bánh Pizza Cỡ Lớn Được Tặng Ngay 01 Pepsi/7Up/Mirinda 1.5 L Cùng 01 Pizza Phô Mai Cao Cấp (R)/ 01 Mì Ý Bò Bằm Xốt Cà Chua",
+      "id": 7,
+      "imgscr": "https://cdn.pizzahut.vn/images/Web_V3/Products/Mua_1_Duoc_3_Large_400x275.jpg",
+      "price": 129000,
+      "title": "MUA 1 ĐƯỢC 3 ( CỠ VỪA)",
+      "count": 1
+    }
+  ],
   "user": [
     {
       "name": "nghia111",

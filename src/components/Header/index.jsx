@@ -5,22 +5,30 @@ import axios from 'axios'
 
 const Header = (props) => {
   const [data,setData] = useState([])
-  const [name,setName] = useState('')
+  const [id,setId] = useState('')
 const userLogin = async ()=>
 {
   try {
     const res = await axios.get('http://localhost:7000/user')
-    setData(Object.values(res.data))
-    setName(data[0].name)
+    setData(res.data[0].name)
+    setId(res.data[0].id)
     
   } catch (error) {
-    
+    console.log('error');
   }
 }
 useEffect(()=>
 {
   userLogin()
 },[])
+const handlerLogout = async ()=>
+{
+  try {
+     await axios.delete(`http://localhost:7000/user/${id}`)
+  } catch (error) {
+    console.log('error');
+  }
+}
 const {acount,setAcount,isUser,setIsUser} = props
   return (   
     <header className={styles.wrapper}>
@@ -33,11 +41,14 @@ const {acount,setAcount,isUser,setIsUser} = props
              </Link>
            </div>
            <div className={styles.right}>
-              <a className={styles.bell}><i className="fa fa-bell"></i></a>
+              
               <a className={styles.user} onClick={()=>setAcount(true)}><i className="fa fa-user"></i> 
               {
-                name?`Hi ${name}`: 'Acount'  
+                (data!= '')?`Chào ${data}`: 'Acount'  
               }</a>
+              <a className={styles.bell} onClick={handlerLogout} href='./'>
+              <img src="https://cdn-icons-png.flaticon.com/512/450/450418.png" alt="" />
+                </a>
               </div>
 
         </div>

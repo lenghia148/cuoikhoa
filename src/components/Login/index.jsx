@@ -32,7 +32,6 @@ const Login = ({acount,setAcount,isUser,setIsUser}) => {
   }, []);
   const handlerSubmit = (e) =>
   {
-    e.preventDefault();
     const userLogin = database.find((item,index)=>
     {
         return (item.mail ===mail &&  item.password === password)
@@ -58,7 +57,7 @@ const Login = ({acount,setAcount,isUser,setIsUser}) => {
   }
   return (
     
-    <form className={styles.form_login}>
+    <form className={styles.form_login}> 
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -90,7 +89,7 @@ const Login = ({acount,setAcount,isUser,setIsUser}) => {
               onChange={(e) =>
               setPassword(e.target.value)}
              ></input>
-        <button onClick={handlerSubmit} className={styles.loginBnt}>ĐĂNG NHẬP</button>
+        <a onClick={handlerSubmit} href='./'  className={styles.loginBnt}><div>ĐĂNG NHẬP</div></a>
         <div className={styles.register_message}>
           Bạn chưa có tài khoản? <Link to={'./signup'} className={styles.signupLink}>Đăng ký ngay</Link> hoặc tìm hiểu thêm về Điều
           khoản và Quyền lợi Thành viên 

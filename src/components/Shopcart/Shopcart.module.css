@@ -1,17 +1,130 @@
 .container
 {
    overflow-y: scroll;
-   height: 500px;
+   height: 450px;
+   width: 95%;
+   margin-left: 3%;
+   box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%),
+    0px 1px 10px 0px rgb(0 0 0 / 12%);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: rgb(241, 238, 238);
 }
 .items
 {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
     height: 50px;
     margin: 10px;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%),
+    0px 1px 10px 0px rgb(0 0 0 / 12%);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: rgb(241, 238, 238);
     
 }
 .count
 {
     width: 30px;
     height: 30px;
+}
+.items>img 
+{
+    width: 70px  ;
+    height: 50;
+}
+
+.item_partner1
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+    
+}
+.item_partner1>input
+{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.item_partner
+{
+    
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.item_partner>button 
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: medium;
+    background-color: rgb(206, 18, 18);
+    color: wheat;
+    cursor: pointer;
+}
+.payment
+{
+    height: 100px;
+    margin-left: 3%;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+     0px 4px 5px 0px rgb(0 0 0 / 14%),
+     0px 1px 10px 0px rgb(0 0 0 / 12%);
+     border: 1px solid transparent;
+     border-radius: 5px;
+     background-color: rgb(241, 238, 238);
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first_h2
+{
+    margin-top: 5%;
+    margin-left: 25%;
+}
+.nothing
+{
+    margin-top: 20px;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(166, 205, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    border-radius: 5px;
+
+}
+.paymentBnt
+{
+    width: 40%;
+    height: 40px;
+    cursor: pointer;
+    background-color: #0A8020;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+     0px 4px 5px 0px rgb(0 0 0 / 14%),
+     0px 1px 10px 0px rgb(0 0 0 / 12%);
+     border: 1px solid transparent;
+     border-radius: 5px;
+     color: white;
+     margin-top: 10px;
+}
+.item_scr
+{
+    width: 60px;
+    height: 30px;
+    margin-left: 5px ;
+    margin-right: 5px;
+    border-radius: 5px;
 }
